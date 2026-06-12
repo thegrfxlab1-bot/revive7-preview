@@ -198,24 +198,17 @@
     document.head.appendChild(style);
 
     // --- Hero Logo "7" Counter Animation ---
-    const heroInner = document.querySelector('.hero-brand-inner');
-    const counterMask = document.getElementById('heroCounterMask');
+    const counterReel = document.getElementById('heroCounterReel');
 
-    if (heroInner && counterMask) {
-        const heroBrand = heroInner.closest('.hero-brand');
+    if (counterReel) {
+        const heroBrand = counterReel.closest('.hero-brand');
 
         const heroObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     setTimeout(() => {
-                        heroInner.classList.add('animating');
+                        counterReel.classList.add('scrolling');
                     }, 300);
-
-                    setTimeout(() => {
-                        counterMask.classList.add('done');
-                        heroInner.classList.remove('animating');
-                    }, 2300);
-
                     heroObserver.unobserve(entry.target);
                 }
             });

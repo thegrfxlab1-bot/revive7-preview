@@ -348,7 +348,7 @@ img {
     filter: drop-shadow(0 4px 30px rgba(218, 165, 32, 0.15));
 }
 
-.hero-brand-inner.animating .hero-brand-logo {
+.hero-brand-logo {
     clip-path: inset(0 12% 0 0);
 }
 
@@ -359,12 +359,7 @@ img {
     width: 12%;
     height: 100%;
     overflow: hidden;
-    opacity: 0;
     pointer-events: none;
-}
-
-.hero-brand-inner.animating .hero-counter-mask {
-    opacity: 1;
 }
 
 .hero-counter-reel {
@@ -389,18 +384,13 @@ img {
     padding-top: 5%;
 }
 
-.hero-brand-inner.animating .hero-counter-reel {
-    animation: reel-scroll 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+.hero-counter-reel.scrolling {
+    animation: reel-scroll 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes reel-scroll {
     from { transform: translateY(0); }
     to { transform: translateY(-85.7143%); }
-}
-
-.hero-counter-mask.done {
-    opacity: 0 !important;
-    transition: opacity 0.3s ease;
 }
 
 .hero-title {
