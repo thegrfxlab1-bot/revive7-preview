@@ -340,17 +340,16 @@ img {
 }
 
 .hero-brand-inner.animating .hero-brand-logo {
-    clip-path: inset(0 13.5% 0 0);
+    clip-path: inset(0 12% 0 0);
 }
 
 .hero-counter-mask {
     position: absolute;
     right: 0;
     top: 0;
-    width: 14%;
-    height: 62%;
+    width: 12%;
+    height: 100%;
     overflow: hidden;
-    background: var(--bg-primary);
     opacity: 0;
     pointer-events: none;
 }
@@ -372,12 +371,13 @@ img {
     justify-content: center;
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: clamp(2.1rem, 5.8vw, 4.6rem);
+    font-size: clamp(2.5rem, 6.5vw, 5.2rem);
     background: var(--gold-gradient-text);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     line-height: 1;
+    padding-top: 5%;
 }
 
 .hero-brand-inner.animating .hero-counter-reel {
@@ -391,7 +391,7 @@ img {
 
 .hero-counter-mask.done {
     opacity: 0 !important;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.3s ease;
 }
 
 .hero-title {
