@@ -198,46 +198,30 @@
     document.head.appendChild(style);
 
     // --- Hero Logo "7" Counter Animation ---
+    const heroInner = document.querySelector('.hero-brand-inner');
     const counterMask = document.getElementById('heroCounterMask');
-    const counterReel = document.getElementById('heroCounterReel');
 
-    if (counterMask && counterReel) {
-        function sizeCounterDigits() {
-            const logo = counterMask.closest('.hero-brand-inner').querySelector('.hero-brand-logo');
-            if (!logo) return;
-            const maskHeight = counterMask.offsetHeight;
-            const fontSize = maskHeight * 0.95;
-            counterReel.querySelectorAll('span').forEach(span => {
-                span.style.height = maskHeight + 'px';
-                span.style.fontSize = fontSize + 'px';
-            });
-        }
+    if (heroInner && counterMask) {
+        const heroBrand = heroInner.closest('.hero-brand');
 
-        function runCounterAnimation() {
-            sizeCounterDigits();
-            const maskHeight = counterMask.offsetHeight;
-            const targetIndex = 6; // 7th item (0-indexed)
-            counterReel.style.transform = `translateY(-${targetIndex * maskHeight}px)`;
-
-            setTimeout(() => {
-                counterMask.classList.add('done');
-                const logo = counterMask.closest('.hero-brand-inner').querySelector('.hero-brand-logo');
-                if (logo) logo.classList.add('reveal-full');
-            }, 2000);
-        }
-
-        const heroBrand = counterMask.closest('.hero-brand');
         const heroObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    setTimeout(runCounterAnimation, 400);
+                    setTimeout(() => {
+                        heroInner.classList.add('animating');
+                    }, 300);
+
+                    setTimeout(() => {
+                        counterMask.classList.add('done');
+                        heroInner.classList.remove('animating');
+                    }, 2300);
+
                     heroObserver.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.1 });
 
         heroObserver.observe(heroBrand);
-        window.addEventListener('resize', sizeCounterDigits, { passive: true });
     }
 
 })();
