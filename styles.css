@@ -389,22 +389,6 @@ img {
     padding-top: 5%;
 }
 
-.counter-logo-seven {
-    position: relative;
-    overflow: hidden;
-    padding: 0 !important;
-}
-
-.counter-logo-seven img {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 833.33%;
-    max-width: none;
-    height: auto;
-    filter: drop-shadow(0 4px 30px rgba(218, 165, 32, 0.15));
-}
-
 .hero-brand-inner.animating .hero-counter-reel {
     animation: reel-scroll 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
 }
