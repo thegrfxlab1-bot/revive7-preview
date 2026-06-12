@@ -3,6 +3,15 @@
    Black + Gold Luxury Design System
    ============================================ */
 
+/* --- Logo Font --- */
+@font-face {
+    font-family: 'Prestige Signature';
+    src: url('assets/prestige-signature-serif.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* --- CSS Custom Properties --- */
 :root {
     --gold-light: #CFB53B;
@@ -369,8 +378,8 @@ img {
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    font-family: var(--font-heading);
-    font-weight: 700;
+    font-family: 'Prestige Signature', var(--font-heading);
+    font-weight: 400;
     font-size: clamp(2.5rem, 6.5vw, 5.2rem);
     background: var(--gold-gradient-text);
     -webkit-background-clip: text;
