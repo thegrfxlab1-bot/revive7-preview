@@ -370,18 +370,19 @@ img {
 
 .hero-counter-reel span {
     flex: 1;
+    min-height: 0;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     font-family: 'Prestige Signature', var(--font-heading);
     font-weight: 400;
-    font-size: clamp(2.5rem, 6.5vw, 5.2rem);
+    font-size: clamp(5rem, 16.5vw, 14.5rem);
     background: var(--gold-gradient-text);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     line-height: 1;
-    padding-top: 5%;
+    margin-top: -0.366em;
 }
 
 .hero-counter-reel.scrolling {
