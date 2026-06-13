@@ -916,7 +916,7 @@ img {
 
 .step-card:hover .step-marker {
     border-color: var(--gold);
-    background: rgba(218, 165, 32, 0.08);
+    background: linear-gradient(rgba(218, 165, 32, 0.08), rgba(218, 165, 32, 0.08)), var(--bg-primary);
     box-shadow: 0 0 0 8px var(--bg-primary);
 }
 
