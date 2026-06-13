@@ -376,7 +376,7 @@ img {
     justify-content: center;
     font-family: 'Prestige Signature', var(--font-heading);
     font-weight: 400;
-    font-size: clamp(5rem, 16.5vw, 14.5rem);
+    font-size: clamp(4.5rem, 15vw, 13rem);
     background: var(--gold-gradient-text);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -863,6 +863,7 @@ img {
     top: 0;
     bottom: 0;
     width: 2px;
+    z-index: 1;
 }
 
 .timeline-line {
@@ -886,6 +887,8 @@ img {
     flex-direction: column;
     gap: 48px;
     padding-left: 0;
+    position: relative;
+    z-index: 2;
 }
 
 .step-card {
