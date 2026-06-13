@@ -855,6 +855,7 @@ img {
 
 .steps-wrapper {
     position: relative;
+    isolation: isolate;
 }
 
 .steps-timeline {
@@ -904,17 +905,19 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--bg-card);
+    background: var(--bg-primary);
     border: 2px solid var(--border-color);
     border-radius: 50%;
     position: relative;
     z-index: 2;
+    box-shadow: 0 0 0 8px var(--bg-primary);
     transition: all 0.4s var(--ease-out);
 }
 
 .step-card:hover .step-marker {
     border-color: var(--gold);
     background: rgba(218, 165, 32, 0.08);
+    box-shadow: 0 0 0 8px var(--bg-primary);
 }
 
 .step-number {
